@@ -1,9 +1,9 @@
 {
     "$schema": "https://developer.microsoft.com/json-schemas/copilot/plugin/v2.1/schema.json",
     "schema_version": "v2.1",
-    "name_for_human": "Users - Subset - Subset",
-    "description_for_human": "Description for Users - Subset - Subset",
-    "description_for_model": "Description for Users - Subset - Subset",
+    "name_for_human": "Groups Agent",
+    "description_for_human": "Agent to help you manage Microsoft 365 teams and groups.",
+    "description_for_model": "Agent to help you manage Microsoft 365 teams and groups.",
     "contact_email": "publisher-email@example.com",
     "namespace": "groupsagent",
     "capabilities": {
@@ -24,7 +24,7 @@
             "type": "OpenApi",
             "auth": {
                 "type": "OAuthPluginVault",
-                "reference_id": "MGFlODYzY2ItN2U5Yy00ODFhLTk3NjItY2M3ZmQwOGRmMjk5IyNjNjc5NGMwOC03YmZhLTQxMTgtODE1ZC01ZDdhOGYwYWEzZmM="
+                "reference_id": "{azureaadv2_REGISTRATION_ID}"
             },
             "spec": {
                 "url": "apiSpecificationFile/openapi.yaml"

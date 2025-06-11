@@ -1,6 +1,6 @@
 openapi: 3.0.4
 info:
-  title: Users - Subset - Subset - Subset
+  title: Groups
   version: v1.0
 servers:
   - url: https://graph.microsoft.com/beta/
@@ -173,9 +173,9 @@ components:
       type: oauth2
       flows:
         authorizationCode:
-          authorizationUrl: https://login.microsoftonline.com/0ae863cb-7e9c-481a-9762-cc7fd08df299/oauth2/v2.0/authorize
-          tokenUrl: https://login.microsoftonline.com/0ae863cb-7e9c-481a-9762-cc7fd08df299/oauth2/v2.0/token
-          scopes: { }
+          authorizationUrl: https://login.microsoftonline.com/{TEAMS_APP_TENANT_ID}/oauth2/v2.0/authorize
+          tokenUrl: https://login.microsoftonline.com/{TEAMS_APP_TENANT_ID}/oauth2/v2.0/token
+          scopes: {  }
       x-ai-auth-reference-id: '{azureaadv2_REGISTRATION_ID}'
 security:
   - azureaadv2: [ ]
