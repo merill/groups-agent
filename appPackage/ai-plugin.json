@@ -1,0 +1,37 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/copilot/plugin/v2.1/schema.json",
+    "schema_version": "v2.1",
+    "name_for_human": "Users - Subset - Subset",
+    "description_for_human": "Description for Users - Subset - Subset",
+    "description_for_model": "Description for Users - Subset - Subset",
+    "contact_email": "publisher-email@example.com",
+    "namespace": "groupsagent",
+    "capabilities": {
+        "conversation_starters": [
+            {
+                "text": "List a user's direct memberships"
+            }
+        ]
+    },
+    "functions": [
+        {
+            "name": "user_ListMemberGraphOPre",
+            "description": "Get groups, directory roles, and administrative units that the user is a direct member of. This operation isn&apos;t transitive. To retrieve groups, directory roles, and administrative units that the user is a member through transitive membership, use the List user transitive memberOf API."
+        }
+    ],
+    "runtimes": [
+        {
+            "type": "OpenApi",
+            "auth": {
+                "type": "OAuthPluginVault",
+                "reference_id": "MGFlODYzY2ItN2U5Yy00ODFhLTk3NjItY2M3ZmQwOGRmMjk5IyNjNjc5NGMwOC03YmZhLTQxMTgtODE1ZC01ZDdhOGYwYWEzZmM="
+            },
+            "spec": {
+                "url": "apiSpecificationFile/openapi.yaml"
+            },
+            "run_for_functions": [
+                "user_ListMemberGraphOPre"
+            ]
+        }
+    ]
+}
